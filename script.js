@@ -27,6 +27,12 @@ const categories = {
 
 let currentCategory = "";
 
+document.querySelectorAll('.category').forEach(item => {
+  item.addEventListener('click', event => {
+    selectCategory(item.id);
+  });
+});
+
 function selectCategory(category) {
   currentCategory = category;
   showQuestion();
