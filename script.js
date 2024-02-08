@@ -33,7 +33,7 @@ function selectCategory(category) {
 }
 
 function showQuestion() {
-  document.getElementById("menu").style.display = "none";
+  document.querySelector(".category-container").style.display = "none";
   document.getElementById("quiz").style.display = "block";
   const randomIndex = Math.floor(Math.random() * categories[currentCategory].length);
   const question = categories[currentCategory][randomIndex].question;
@@ -52,6 +52,6 @@ function checkAnswer() {
 }
 
 function returnToMenu() {
-  document.getElementById("menu").style.display = "block";
+  document.querySelector(".category-container").style.display = "flex";
   document.getElementById("quiz").style.display = "none";
 }
